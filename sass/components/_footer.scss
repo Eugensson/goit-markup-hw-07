@@ -1,0 +1,131 @@
+.footer {
+  padding: 60px 0;
+  background-color: var(--footer-background-color);
+}
+
+.footer-container {
+  display: flex;
+  align-items: baseline;
+}
+
+.footer__item {
+  display: block;
+}
+
+.footer__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+
+.footer__map {
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--white-text-color);
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
+}
+
+.footer__link {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  color: var(--footer-link-color);
+
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-text-color);
+  }
+}
+
+.footer__title {
+  margin-bottom: 20px;
+
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--white-text-color);
+}
+
+.social {
+  margin-left: 70px;
+}
+
+.social__list {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.social__icon {
+  fill: var(--white-text-color);
+}
+
+.social__link {
+  display: flex;
+  width: 44px;
+  height: 44px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--cellar-link-background-color);
+
+  transition: background-color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--button-primary-background-color);
+  }
+}
+
+.subscription {
+  width: 570px;
+  height: 86px;
+  margin-left: auto;
+}
+
+.subscription__form {
+  display: flex;
+}
+
+.subscription__input {
+  width: 100%;
+  margin-right: 12px;
+}
+
+.subscription__label {
+  display: block;
+  width: 358px;
+  height: 50px;
+  padding: 15px 16px;
+
+  color: var(--white-text-color);
+  background: var(--footer-background-color);
+  border: 1px solid var(--footer-border-input);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+
+  &::placeholder {
+    font-size: 16px;
+    line-height: 1.25;
+    color: var(--footer-placeholder-text);
+  }
+}
+
+.subscription__button {
+  margin: 0;
+  max-width: 200px;
+}
+
+.subscription__icon {
+  margin-left: 10px;
+  fill: var(--primary-background-color);
+}
