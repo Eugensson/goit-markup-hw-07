@@ -10,10 +10,10 @@
 
 .footer__item {
   display: block;
-}
 
-.footer__item:not(:last-child) {
-  margin-bottom: 9px;
+  &:not(:last-child) {
+    margin-bottom: 9px;
+  }
 }
 
 .footer__map {
