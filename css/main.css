@@ -36,6 +36,20 @@
   --footer-placeholder-text: rgba(255, 255, 255, 0.6);
 }
 
+.visually-hidden {
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  border: 0;
+  padding: 0;
+  clip: rect(0 0 0 0);
+  -webkit-clip-path: inset(50%);
+          clip-path: inset(50%);
+  margin: -1px;
+}
+
 html {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -76,22 +90,8 @@ body {
 
 .activity__image,
 .team__image,
-.portfolio__image {
+.projects__image {
   display: block;
-}
-
-.visually-hidden {
-  position: absolute;
-  white-space: nowrap;
-  width: 1px;
-  height: 1px;
-  overflow: hidden;
-  border: 0;
-  padding: 0;
-  clip: rect(0 0 0 0);
-  -webkit-clip-path: inset(50%);
-          clip-path: inset(50%);
-  margin: -1px;
 }
 
 .button {
@@ -129,7 +129,7 @@ body {
           box-shadow: var(--button-shadow-hero);
 }
 
-.button__filter {
+.filter__button {
   display: inline-block;
   border: 0px solid transparent;
   padding: 6px 22px;
@@ -149,7 +149,7 @@ body {
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function);
   transition: color 250ms var(--timing-function), background-color 250ms var(--timing-function), box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
 }
-.button__filter:hover, .button__filter:focus {
+.filter__button:hover, .filter__button:focus {
   color: var(--white-text-color);
   background-color: var(--button-primary-background-color);
   -webkit-box-shadow: var(--button-shadow);
@@ -168,11 +168,11 @@ body {
   color: var(--accent-text-color);
 }
 
-.logo__header {
+.header__logo {
   padding: 24px 0;
 }
 
-.logo__footer {
+.footer__logo {
   display: inline-block;
   margin-bottom: 20px;
   color: var(--white-text-color);
@@ -354,7 +354,7 @@ body {
   padding-bottom: 94px;
 }
 
-.section__title {
+.activity__title {
   display: block;
   margin-bottom: 50px;
   font-weight: 700;
@@ -402,6 +402,15 @@ body {
 .team {
   padding: 94px 0;
   background-color: var(--secondary-background-color);
+}
+
+.team__title {
+  display: block;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
 }
 
 .team__list {
@@ -484,6 +493,15 @@ body {
   padding: 94px 0;
 }
 
+.clients__title {
+  display: block;
+  margin-bottom: 50px;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.17;
+  text-align: center;
+}
+
 .clients__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -533,7 +551,7 @@ body {
   padding: 94px 0;
 }
 
-.filter__list {
+.filter {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -544,7 +562,7 @@ body {
   gap: 8px;
 }
 
-.portfolio__list {
+.projects {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -552,35 +570,35 @@ body {
       flex-wrap: wrap;
 }
 
-.portfolio__card {
+.projects__card {
   width: calc((100% - 60px) / 3);
 }
-.portfolio__card:not(:nth-child(3n)) {
+.projects__card:not(:nth-child(3n)) {
   margin-right: 30px;
 }
-.portfolio__card:not(:nth-last-child(-n+3)) {
+.projects__card:not(:nth-last-child(-n+3)) {
   margin-bottom: 30px;
 }
 
-.portfolio__link {
+.projects__link {
   display: block;
   -webkit-transition: -webkit-box-shadow 250ms var(--timing-function);
   transition: -webkit-box-shadow 250ms var(--timing-function);
   transition: box-shadow 250ms var(--timing-function);
   transition: box-shadow 250ms var(--timing-function), -webkit-box-shadow 250ms var(--timing-function);
 }
-.portfolio__link:hover, .portfolio__link:focus {
+.projects__link:hover, .projects__link:focus {
   -webkit-box-shadow: var(--portfolio-elements-shadow);
           box-shadow: var(--portfolio-elements-shadow);
 }
 
-.portfolio__items {
+.projects__items {
   padding: 20px 24px;
   border: 1px solid var(--portfolio-border-elements-color);
   border-top: 0;
 }
 
-.portfolio__subtitle {
+.projects__subtitle {
   display: block;
   margin-bottom: 4px;
   font-weight: 700;
@@ -590,19 +608,19 @@ body {
   color: var(--primary-text-color);
 }
 
-.portfolio__text {
+.projects__text {
   display: block;
   font-size: 16px;
   line-height: 1.88;
   color: var(--secondary-text-color);
 }
 
-.portfolio__thumb {
+.projects__thumb {
   position: relative;
   overflow: hidden;
 }
 
-.portfolio__overlay {
+.projects__overlay {
   position: absolute;
   padding: 63px 24px;
   top: 0%;
@@ -617,7 +635,7 @@ body {
   transition: transform 250ms var(--timing-function);
   transition: transform 250ms var(--timing-function), -webkit-transform 250ms var(--timing-function);
 }
-.portfolio__link:hover .portfolio__overlay, .portfolio__link:focus .portfolio__overlay {
+.projects__link:hover .projects__overlay, .projects__link:focus .projects__overlay {
   -webkit-transform: translateY(0%);
           transform: translateY(0%);
 }
@@ -627,7 +645,7 @@ body {
   background-color: var(--footer-background-color);
 }
 
-.footer-container {
+.footer__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
